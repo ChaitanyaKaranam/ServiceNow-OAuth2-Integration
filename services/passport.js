@@ -3,8 +3,8 @@ const OAuthStrategy = require('passport-oauth2');
 const keys = require('../config/keys');
 
 passport.use('servicenow',new OAuthStrategy({
-    authorizationURL: 'https://dev21855.service-now.com/oauth_auth.do',
-    tokenURL: 'https://dev21855.service-now.com/oauth_token.do',
+    authorizationURL: 'https://<INSTANCE>.service-now.com/oauth_auth.do',
+    tokenURL: 'https://<INSTANCE>.service-now.com/oauth_token.do',
     clientID: keys.serviceNowClientID,
     clientSecret: keys.serviceNowClientSecret,
     callbackURL: "http://localhost:5000/auth/servicenow/callback"
