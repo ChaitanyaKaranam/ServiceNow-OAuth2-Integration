@@ -4,7 +4,7 @@ const axios = require('axios');
 
 router.get('/incidents/sample',(req,res)=>{
     const options={
-        url:`https://dev21855.service-now.com/api/now/v2/table/incident?sysparm_limit=1`,
+        url:`https://<INSTANCE>.service-now.com/api/now/v2/table/incident?sysparm_limit=1`,
         method:'get',
         headers:{
             'Authorization':`Bearer ${req.user}`
