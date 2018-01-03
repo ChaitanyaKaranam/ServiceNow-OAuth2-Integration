@@ -1,0 +1,27 @@
+{
+  "name": "servicenow-authentication",
+  "version": "1.0.0",
+  "description": "Oauth2.0 Authentication for ServiceNow",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "passport"
+  ],
+  "author": "Chaitanya Karanam",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "passport": "^0.4.0",
+    "passport-oauth2": "^1.4.0"
+  }
+}
