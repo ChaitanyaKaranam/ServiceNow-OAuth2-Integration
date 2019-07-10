@@ -2,6 +2,11 @@ const passport = require('passport');
 const OAuthStrategy = require('passport-oauth2');
 const keys = require('../config/keys');
 
+// https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/reference/oauth-auth-code-flow-state-parm.html
+OAuthStrategy.prototype.authorizationParams = function(options) {
+    return { state: 123 }
+}
+
 passport.use('servicenow',new OAuthStrategy({
     authorizationURL: 'https://<INSTANCE>.service-now.com/oauth_auth.do',
     tokenURL: 'https://<INSTANCE>.service-now.com/oauth_token.do',
